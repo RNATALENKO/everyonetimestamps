@@ -44,10 +44,50 @@ const createTimestamp = (dateString, timeString) => {
       return Date.UTC(currentYear,month,day,hour,minutes);
 }
 
-let earlierStamp = createTimestamp("wed 8/11/21", "1:00pm");
-let laterStamp = createTimestamp("wed 8/11/21", "1:30pm");
 
-if(earlierStamp < laterStamp){
-   console.log('eureka!, The stamps can be sorted by date and time!');
-}
+let arr = [
+   {
+      scheduled:['8/1/21', "12:00pm"],
+      timestamp: createTimestamp('8/1/21', "12:00pm")
+   },
+   {
+      scheduled:['8/1/21', "11:00am"],
+      timestamp: createTimestamp('8/1/21', "11:00am")
+   },
+   {
+      scheduled:['8/3/21', "7:00pm"],
+      timestamp: createTimestamp('8/3/21', "7:00pm")
+   },
+   {
+      scheduled:['8/4/21', "10:00am"],
+      timestamp: createTimestamp('8/4/21', "10:00am")
+   },
+   
+   {
+      scheduled:['8/2/21', "3:00pm"],
+      timestamp: createTimestamp('8/2/21', "3:00pm")
+   },
+  
+   {
+      scheduled:['8/5/21', "5:00pm"],
+      timestamp: createTimestamp('8/5/21', "5:00pm")
+   },
+  
+  
+   {
+      scheduled:['8/4/21', "1:00pm"],
+      timestamp: createTimestamp('8/4/21', "1:00pm")
+   },
+   {
+      scheduled:['8/4/21', "2:00pm"],
+      timestamp: createTimestamp('8/4/21', "2:00pm")
+   },
+   {
+      scheduled:['8/2/21', "4:00pm"],
+      timestamp: createTimestamp('8/2/21', "4:00pm")
+   },
+  
+]
 
+
+module.exports = arr; 
