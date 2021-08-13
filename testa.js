@@ -90,4 +90,4 @@ let arr = [
 ]
 
 
-module.exports = arr; 
+module.exports = {arr, createTimestamp}; 
